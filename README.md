@@ -1,5 +1,7 @@
 # bootstrap-modal
 
+[![Ember Observer Score](http://emberobserver.com/badges/bootstrap-modal.svg)](http://emberobserver.com/addons/bootstrap-modal)
+
 ## Usage
 
 ### Installation
