@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-modal",
   "version": "1.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Bootstrap Modal (w/ animation) addon for Ember CLI",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/knownasilya/bootstrap-modal",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ilya Radchenko",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -36,7 +36,12 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "bootstrap",
+    "modal",
+    "animation",
+    "ember",
+    "ui"
   ],
   "dependencies": {
     "liquid-tether": "pzuraq/liquid-tether#23f7494",

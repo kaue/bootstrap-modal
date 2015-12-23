@@ -1,5 +1,7 @@
 # bootstrap-modal
 
+Bootstrap Modal (w/ animation) addon for Ember CLI
+
 [![Ember Observer Score](http://emberobserver.com/badges/bootstrap-modal.svg)](http://emberobserver.com/addons/bootstrap-modal)
 
 ## Usage
