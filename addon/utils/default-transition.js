@@ -6,20 +6,24 @@ const options = {
 };
 
 export default function defaultTransition(context) {
+  if (typeof context.transition !== 'function') {
+    throw new Error('[bootstrap-modal] Invalid transitions context supplied');
+  }
+
   return context.transition(
     target('bootstrap-modal'),
     // hack to get reverse working..
-    this.toValue(current => {
+    context.toValue(current => {
       return current.isVisible;
     }),
-    this.use('explode', {
+    context.use('explode', {
       pick: '.modal-dialog',
       use: ['to-down', options]
     }, {
       pick: '.modal-backdrop',
       use: 'crossFade'
     }),
-    this.reverse('explode', {
+    context.reverse('explode', {
       pick: '.modal-dialog',
       use: ['to-up', options]
     }, {
