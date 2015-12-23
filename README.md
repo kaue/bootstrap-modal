@@ -16,26 +16,31 @@ ember install bootstrap-modal
 
 ### Using
 
+Usually you will want to create custom components based on this component, since
+every ones needs are different. The following is a simple example of what you can do.
+
 ```hbs
 {{#if showModal}}
-  {{#bootstrap-modal close=(action 'toggleShowModal') closeOnOverlayClick=true}}
-    <div class="modal-header">
-      <button type="button" class="close" aria-label="Close" {{action 'toggleShow'}}>
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h4 class="modal-title">Test</h4>
-    </div>
+  {{#with (action 'toggleShowModal') as |toggle|}}
+    {{#bootstrap-modal close=(action toggle) closeOnOverlayClick=true}}
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" {{action toggle}}>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Test</h4>
+      </div>
 
-    <div class="modal-body">
-      Content Here
-    </div>
+      <div class="modal-body">
+        Content Here
+      </div>
 
-    <div class="modal-footer">
-      <button {{action 'toggleShow'}} type="button" class="btn btn-primary">
-        Close
-      </button>
-    </div>
-  {{/bootstrap-modal}}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" {{action toggle}}>
+          Close
+        </button>
+      </div>
+    {{/bootstrap-modal}}
+  {{/with}
 {{/if}}
 ```
 
