@@ -34,6 +34,11 @@ ember install bootstrap-modal
 {{/if}}
 ```
 
+The `toggleShowModal` is an action that toggles the `showModal` boolean.
+
+If you have your own `app/transitions.js`, then you will need to add the modal transition
+like the example below, otherwise, the transition should just work.
+
 ```js
 // app/transitions.js
 
@@ -46,8 +51,6 @@ export default function () {
   // other transitions here..
 }
 ```
-
-The `toggleShowModal` is an action that toggles the `showModal` boolean.
 
 
 ## Developing
