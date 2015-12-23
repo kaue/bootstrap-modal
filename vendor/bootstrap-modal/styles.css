@@ -1,0 +1,17 @@
+.liquid-target-container.has-targets {
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  z-index: 2002;
+}
+
+.modal-backdrop {
+  z-index: 2001;
+  opacity: 0.8;
+}
+
+.modal-backdrop.clickable {
+  cursor: pointer;
+}
