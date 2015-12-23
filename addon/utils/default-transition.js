@@ -5,8 +5,8 @@ const options = {
   easing: 'easeInOutQuint'
 };
 
-export default function () {
-  this.transition(
+export default function defaultTransition(context) {
+  return context.transition(
     target('bootstrap-modal'),
     // hack to get reverse working..
     this.toValue(current => {

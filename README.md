@@ -34,6 +34,19 @@ ember install bootstrap-modal
 {{/if}}
 ```
 
+```js
+// app/transitions.js
+
+import defaultTransition from 'bootstrap-modal/utils/default-transition';
+
+export default function () {
+  // bootstrap-modal transition
+  defaultTransition(this);
+
+  // other transitions here..
+}
+```
+
 The `toggleShowModal` is an action that toggles the `showModal` boolean.
 
 
