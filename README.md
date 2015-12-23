@@ -1,25 +1,65 @@
-# Bootstrap-modal
+# bootstrap-modal
 
-This README outlines the details of collaborating on this Ember addon.
+## Usage
 
-## Installation
+### Installation
+
+
+```no-highlight
+ember install bootstrap-modal
+```
+
+### Using
+
+```hbs
+{{#if showModal}}
+  {{#bootstrap-modal close=(action 'toggleShowModal') closeOnOverlayClick=true}}
+    <div class="modal-header">
+      <button type="button" class="close" aria-label="Close" {{action 'toggleShow'}}>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title">Test</h4>
+    </div>
+
+    <div class="modal-body">
+      Content Here
+    </div>
+
+    <div class="modal-footer">
+      <button {{action 'toggleShow'}} type="button" class="btn btn-primary">
+        Close
+      </button>
+    </div>
+  {{/bootstrap-modal}}
+{{/if}}
+```
+
+The `toggleShowModal` is an action that toggles the `showModal` boolean.
+
+
+## Developing
+
+Follow the steps below to start the dummy app, and work on contributing
+to this addon.
+
+### Installation
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
 
-## Running
+### Running
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+### Running Tests
 
 * `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
-## Building
+### Building
 
 * `ember build`
 
